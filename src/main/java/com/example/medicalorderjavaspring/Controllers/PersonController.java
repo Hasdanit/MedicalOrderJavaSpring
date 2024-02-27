@@ -57,7 +57,7 @@ public class PersonController {
 
     @PostMapping("/age/{person_age}")
     public List<Person> getAllByAge(@PathVariable("person_age") int age){
-        return service.getBySurname(age);
+        return service.getByAge(age);
     }
 
     @PostMapping("/role/{person_role}")

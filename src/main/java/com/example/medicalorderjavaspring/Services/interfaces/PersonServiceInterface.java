@@ -9,6 +9,11 @@ public interface PersonServiceInterface {
     Person getById(int id);
     Person create(Person user);
     List<Person> getBySurname(String surname);
+    List<Person> getByAge(int age);
+
+
 
     String createPerson(String name, String surname, String gender, int age, String role);
+
+
 }
