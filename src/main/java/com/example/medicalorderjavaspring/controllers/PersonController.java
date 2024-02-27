@@ -33,9 +33,9 @@ public class PersonController {
     public ResponseEntity<Person> getById(@PathVariable("user_id") int id){
         Person user = service.getById(id);
         if(user == null)
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND); //404
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND); //gives us an error 404
 
-        return new ResponseEntity<>(user, HttpStatus.OK); //200
+        return new ResponseEntity<>(user, HttpStatus.OK); //error 200
     }
 
     @PostMapping("/")
@@ -51,4 +51,10 @@ public class PersonController {
     public List<Person> getAllBySurname(@PathVariable("user_surname") String surname){
         return service.getBySurname(surname);
     }
+
+    public String createPerson(String name, String surname, String gender, int age, String role) {
+        return service.createPerson(name, surname, gender, age, role);
+
+    }
+
 }
