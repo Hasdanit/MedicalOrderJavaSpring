@@ -1,8 +1,7 @@
-package com.example.medicalorderjavaspring.controllers;
+package com.example.medicalorderjavaspring.Controllers;
 
-import com.example.medicalorderjavaspring.models.Person;
-import com.example.medicalorderjavaspring.services.PersonService;
-import com.example.medicalorderjavaspring.services.interfaces.PersonServiceInterface;
+import com.example.medicalorderjavaspring.Models.Person;
+import com.example.medicalorderjavaspring.Services.interfaces.PersonServiceInterface;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

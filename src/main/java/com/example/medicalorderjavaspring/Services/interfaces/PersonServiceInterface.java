@@ -1,6 +1,6 @@
-package com.example.medicalorderjavaspring.services.interfaces;
+package com.example.medicalorderjavaspring.Services.interfaces;
 
-import com.example.medicalorderjavaspring.models.Person;
+import com.example.medicalorderjavaspring.Models.Person;
 
 import java.util.List;
 

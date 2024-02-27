@@ -1,4 +1,4 @@
-package com.example.medicalorderjavaspring.models;
+package com.example.medicalorderjavaspring.Models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
