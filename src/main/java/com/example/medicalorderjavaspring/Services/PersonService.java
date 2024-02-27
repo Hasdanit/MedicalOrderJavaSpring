@@ -1,8 +1,8 @@
-package com.example.medicalorderjavaspring.services;
+package com.example.medicalorderjavaspring.Services;
 
-import com.example.medicalorderjavaspring.models.Person;
-import com.example.medicalorderjavaspring.services.interfaces.PersonServiceInterface;
-import com.example.medicalorderjavaspring.repositories.PersonRepositoryInterface;
+import com.example.medicalorderjavaspring.Models.Person;
+import com.example.medicalorderjavaspring.Services.interfaces.PersonServiceInterface;
+import com.example.medicalorderjavaspring.Repositories.PersonRepositoryInterface;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,6 +1,6 @@
 package com.example.medicalorderjavaspring;
 
-import com.example.medicalorderjavaspring.controllers.PersonController;
+import com.example.medicalorderjavaspring.Controllers.PersonController;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

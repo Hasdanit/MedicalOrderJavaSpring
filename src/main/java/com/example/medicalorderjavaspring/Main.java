@@ -1,6 +1,6 @@
 package com.example.medicalorderjavaspring;
 
-import com.example.medicalorderjavaspring.models.Person;
+import com.example.medicalorderjavaspring.Models.Person;
 
 import java.sql.*;
 import java.util.ArrayList;

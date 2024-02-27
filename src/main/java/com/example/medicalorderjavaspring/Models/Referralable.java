@@ -1,4 +1,4 @@
-package com.example.medicalorderjavaspring.models;
+package com.example.medicalorderjavaspring.Models;
 
 public interface Referralable {
     void getReferral(String diagnosis);
