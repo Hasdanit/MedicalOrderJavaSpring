@@ -3,7 +3,6 @@ package com.example.medicalorderjavaspring.services;
 import com.example.medicalorderjavaspring.models.Person;
 import com.example.medicalorderjavaspring.services.interfaces.PersonServiceInterface;
 import com.example.medicalorderjavaspring.repositories.UserRepositoryInterface;
-
 import org.springframework.stereotype.Service;
 
 import java.util.List;
