@@ -17,8 +17,11 @@ public interface PersonRepositoryInterface {
 
     public Person save(Person user);
     public List<Person> findBySurname(String surname);
-    List<Person> getByAge(int age);
+    List<Person> findByAge(int age);
+
     List<Person> getByRole(String role);
 
     public String createPerson(String name, String surname, String gender, int age, String role);
+
+
 }

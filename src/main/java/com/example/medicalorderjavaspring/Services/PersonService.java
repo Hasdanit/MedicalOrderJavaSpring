@@ -37,6 +37,12 @@ public class PersonService implements PersonServiceInterface {
 
         return repo.findBySurname(surname);
     }
+    @Override
+    public List<Person> getByAge(int age) {
+
+        return repo.findByAge(age);
+    }
+
 
     @Override
     public String createPerson(String name, String surname, String gender, int age, String role) {
