@@ -1,6 +1,7 @@
 package com.example.medicalorderjavaspring;
 
 import com.example.medicalorderjavaspring.Models.Person;
+import com.example.medicalorderjavaspring.Exceptions.Exception;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -31,15 +32,15 @@ public class Main {
                 users.add(person);
             }
         } catch (SQLException e) {
-            System.out.println("connection error: " + e.getMessage());
+            Exception.handleSQLException(e);
         } catch (ClassNotFoundException e) {
-            System.out.println("driver error: " + e.getMessage());
+            Exception.handleClassNotFoundException(e);
         } finally {
             if (con != null) {
                 try {
                     con.close();
                 } catch (SQLException e) {
-                    System.out.println("could not close the connection: " + e.getMessage());
+                    Exception.handleConnectionCloseException(e);
                 }
             }
         }
@@ -48,5 +49,4 @@ public class Main {
             System.out.println(person);
         }
     }
-
 }
