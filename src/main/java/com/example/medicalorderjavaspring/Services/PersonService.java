@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
 @Service
 public class PersonService implements PersonServiceInterface {
     private final PersonRepositoryInterface repo;
@@ -23,6 +24,7 @@ public class PersonService implements PersonServiceInterface {
 
     @Override
     public Person getById(int id) {
+
         return repo.findById(id).orElse(null);
     }
 

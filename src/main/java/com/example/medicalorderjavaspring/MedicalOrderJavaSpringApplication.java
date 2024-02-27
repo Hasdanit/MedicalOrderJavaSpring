@@ -52,7 +52,7 @@ public class MedicalOrderJavaSpringApplication {
     }
 
     public void getAllUsersMenu() {
-        String response = controller.getAllUsers();
+        String response = controller.getAllPerson();
         System.out.println(response);
     }
 
@@ -60,7 +60,7 @@ public class MedicalOrderJavaSpringApplication {
         System.out.println("Please enter id");
 
         int id = scanner.nextInt();
-        String response = controller.getUser(id);
+        String response = controller.getPerson(id);
         System.out.println(response);
     }
 

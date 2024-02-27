@@ -10,9 +10,7 @@ public interface PersonServiceInterface {
     Person create(Person user);
     List<Person> getBySurname(String surname);
     List<Person> getByAge(int age);
-
-
-    String createPerson(String name, String surname, String gender, int age, String role);
+    List<Person> getByRole(String role);
 
 
 

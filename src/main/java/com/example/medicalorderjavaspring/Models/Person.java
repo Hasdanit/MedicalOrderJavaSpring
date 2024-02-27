@@ -22,11 +22,10 @@ public class Person {
     private String gender;
     private int age;
     private String role;
-
-
-    @Override
-    public String toString() {
-        return id + ": " + name + " " + surname + " - " + gender + ' ' + age + ' ' +role;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public int getId() {
+        return id;
     }
 }
 
