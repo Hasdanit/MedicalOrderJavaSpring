@@ -29,8 +29,8 @@ public class PersonController {
         return service.getAll();
     }
 
-    @GetMapping("/{user_id}")
-    public ResponseEntity<Person> getById(@PathVariable("user_id") int id){
+    @GetMapping("/{person_id}")
+    public ResponseEntity<Person> getById(@PathVariable("person_id") int id){
         Person user = service.getById(id);
         if(user == null)
             return new ResponseEntity<>(HttpStatus.NOT_FOUND); //gives us an error 404
@@ -47,9 +47,23 @@ public class PersonController {
         return new ResponseEntity<>(createdUser, HttpStatus.CREATED); //201
     }
 
-    @GetMapping("/surname/{user_surname}")
-    public List<Person> getAllBySurname(@PathVariable("user_surname") String surname){
+    @GetMapping("/surname/{person_surname}")
+    public List<Person> getAllBySurname(@PathVariable("person_surname") String surname){
         return service.getBySurname(surname);
+    }
+    @PostMapping("/gender/{person_gender}")
+    public List<Person> getAllBySurname(@PathVariable("person_gender") String gender){
+        return service.getBySurname(gender);
+    }
+
+    @PostMapping("/age/{person_age}")
+    public List<Person> getAllBySurname(@PathVariable("person_age") int age){
+        return service.getBySurname(age);
+    }
+
+    @PostMapping("/role/{person_role}")
+    public List<Person> getAllBySurname(@PathVariable("person_role") String role){
+        return service.getBySurname(role);
     }
 
     public String createPerson(String name, String surname, String gender, int age, String role) {
