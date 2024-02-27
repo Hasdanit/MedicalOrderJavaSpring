@@ -1,2 +1,4 @@
-package com.example.medicalorderjavaspring.services.interfaces;public class TransactionService {
+package com.example.medicalorderjavaspring.services;
+
+public class TransactionService {
 }
