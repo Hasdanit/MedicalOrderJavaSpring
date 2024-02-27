@@ -1,6 +1,8 @@
 package com.example.medicalorderjavaspring.controllers;
 
 import com.example.medicalorderjavaspring.models.Person;
+import com.example.medicalorderjavaspring.services.PersonService;
+import com.example.medicalorderjavaspring.services.interfaces.PersonServiceInterface;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,18 +14,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping("person")
 
-public class UserController {
-    private final Person service;
+public class PersonController {
+    private final PersonServiceInterface service;
 
-    public UserController(Person service) {
+    public PersonController(PersonServiceInterface service) {
         this.service = service;
-    }
-
-    @GetMapping
-    public String sayHello(){
-        return "Say Hello";
     }
 
 
