@@ -17,6 +17,7 @@ public class PersonService implements PersonServiceInterface {
 
     @Override
     public List<Person> getAll() {
+
         return repo.findAll();
     }
 
@@ -27,11 +28,17 @@ public class PersonService implements PersonServiceInterface {
 
     @Override
     public Person create(Person user) {
+
         return repo.save(user);
     }
 
     @Override
     public List<Person> getBySurname(String surname) {
         return repo.findBySurname(surname);
+    }
+
+    @Override
+    public String createPerson(String name, String surname, String gender, int age, String role) {
+        return null;
     }
 }

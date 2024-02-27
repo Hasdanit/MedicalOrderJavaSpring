@@ -51,17 +51,17 @@ public class PersonController {
         return service.getBySurname(surname);
     }
     @PostMapping("/gender/{person_gender}")
-    public List<Person> getAllBySurname(@PathVariable("person_gender") String gender){
+    public List<Person> getAllByGender(@PathVariable("person_gender") String gender){
         return service.getBySurname(gender);
     }
 
     @PostMapping("/age/{person_age}")
-    public List<Person> getAllBySurname(@PathVariable("person_age") int age){
+    public List<Person> getAllByAge(@PathVariable("person_age") int age){
         return service.getBySurname(age);
     }
 
     @PostMapping("/role/{person_role}")
-    public List<Person> getAllBySurname(@PathVariable("person_role") String role){
+    public List<Person> getAllByRole(@PathVariable("person_role") String role){
         return service.getBySurname(role);
     }
 
