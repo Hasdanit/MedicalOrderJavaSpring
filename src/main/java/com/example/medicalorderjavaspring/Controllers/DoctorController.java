@@ -16,5 +16,7 @@ public class DoctorController {
         return service.getAll();
     }
     @GetMapping("/surname/{doctor_surname}")
-
+    public List<Doctor> getBySurname(@PathVariable("doctor_surname") String doctor_surname){
+        return service.getBySurname(doctor_surname);
+    }
 }
