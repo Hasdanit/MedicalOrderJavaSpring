@@ -1,13 +1,13 @@
 package com.example.medicalorderjavaspring.Services;
 
 import com.example.medicalorderjavaspring.Models.Doctor;
-import com.example.medicalorderjavaspring.Repositories.DoctorRepositoryInterface;
 import com.example.medicalorderjavaspring.Services.interfaces.DoctorServiceInterface;
+import com.example.medicalorderjavaspring.Repositories.DoctorRepositoryInterface;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
-@Service
 public class DoctorService implements DoctorServiceInterface {
     private final DoctorRepositoryInterface repo;
 
