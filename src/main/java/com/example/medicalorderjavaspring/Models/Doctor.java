@@ -22,15 +22,4 @@ public class Doctor extends Person implements Payable {
     public double getPaymentAmount() {
         return salary; 
     }
-
-    @Override
-    public String toString() {
-        return super.toString() + "Doctor{" +
-                "id=" + id +
-                ", specialization='" + specialization + '\'' +
-                ", roomNumber=" + roomNumber +
-                ", isAvailable=" + isAvailable +
-                ", salary=" + salary +
-                '}';
-    }
 }

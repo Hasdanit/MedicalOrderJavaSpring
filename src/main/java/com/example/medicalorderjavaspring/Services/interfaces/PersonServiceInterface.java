@@ -12,6 +12,4 @@ public interface PersonServiceInterface {
     List<Person> getByAge(int age);
     List<Person> getByRole(String role);
 
-
-
 }
