@@ -11,7 +11,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @RestController
-@RequestMapping("person")
+@RequestMapping("patient")
 public class PatientController {
     private final PatientServiceInterface service;
     public PatientController(PatientServiceInterface service) {
