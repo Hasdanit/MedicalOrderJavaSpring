@@ -5,6 +5,8 @@ import com.example.medicalorderjavaspring.Services.interfaces.PatientServiceInte
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -15,6 +17,7 @@ import java.util.List;
 public class PatientController {
     private final PatientServiceInterface service;
     public PatientController(PatientServiceInterface service) {
+
         this.service = service;
     }
     @GetMapping("/")
@@ -43,7 +46,7 @@ public class PatientController {
     }
     @GetMapping("/gender/{patient_gender}")
     public List<Patient> getAllByGender(@PathVariable("patient_gender") String gender){
-        return service.getBySurname(gender);
+        return service.getByGender(gender);
     }
     @GetMapping("/age/{patient_age}")
     public List<Patient> getAllByAge(@PathVariable("patient_age") int age){

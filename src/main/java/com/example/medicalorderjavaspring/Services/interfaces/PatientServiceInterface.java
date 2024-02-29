@@ -11,10 +11,16 @@ public interface PatientServiceInterface {
 
     Patient getById(int id);
 
-    Patient getByDiagnosis(String diagnosis);
-    Patient getByIsOnReecord(boolean isOnReecord);
-    Patient getByBloodType(String bloodType);
-    Patient getByIsVaccinated(boolean isVaccinated);
-    Patient getByChronicDiseases(String chronicDiseases);
-    Patient getByIsInsurance(boolean isInsurance);
+    List<Patient> getByDiagnosis(String diagnosis);
+    List<Patient> getByIsOnReecord(boolean isOnReecord);
+    List<Patient> getByBloodType(String bloodType);
+    List<Patient> getByIsVaccinated(boolean isVaccinated);
+    List<Patient> getByChronicDiseases(String chronicDiseases);
+    List<Patient> getByIsInsurance(boolean isInsurance);
+
+    List<Patient> getBySurname(String surname);
+
+    List<Patient> getByGender(String gender);
+
+    List<Patient> getByAge(int age);
 }

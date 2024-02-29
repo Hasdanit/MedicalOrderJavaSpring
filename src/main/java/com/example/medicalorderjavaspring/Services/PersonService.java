@@ -13,6 +13,7 @@ public class PersonService implements PersonServiceInterface {
     private final PersonRepositoryInterface repo;
 
     public PersonService(PersonRepositoryInterface repo) {
+
         this.repo = repo;
     }
 
@@ -25,13 +26,16 @@ public class PersonService implements PersonServiceInterface {
     @Override
     public Person getById(int id) {
 
-        return repo.findById(id).orElse(null);
+        return repo.findById(id);
     }
 
     @Override
     public Person create(Person user) {
 
         return repo.save(user);
+    }
+    public List<Person> getByRole(String role){
+        return repo.getByRole(role);
     }
 
     @Override
@@ -45,6 +49,8 @@ public class PersonService implements PersonServiceInterface {
         return repo.findByAge(age);
     }
     public String createPerson(String name, String surname, String gender, int age, String role) {
+
+
         return null;
     }
 }

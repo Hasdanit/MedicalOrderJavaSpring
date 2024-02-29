@@ -25,6 +25,7 @@ public class PersonController {
 
     @GetMapping("/")
     public List<Person> getAll(){
+
         return service.getAll();
     }
 

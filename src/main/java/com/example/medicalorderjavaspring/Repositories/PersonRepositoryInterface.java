@@ -6,14 +6,14 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 @Repository
-public interface PersonRepositoryInterface {
-    public List<Person> findAll();
-    public Person getById(int id);
-    public Person create(Person user);
-    public List<Person> getBySurname(String surname);
-    public Person findById(int id);
-    public Person save(Person user);
-    public List<Person> findBySurname(String surname);
+public interface PersonRepositoryInterface extends JpaRepository<Person, Integer>{
+    List<Person> findAll();
+    Person getById(int id);
+    Person create(Person user);
+    List<Person> getBySurname(String surname);
+    Person findById(int id);
+    Person save(Person user);
+    List<Person> findBySurname(String surname);
     List<Person> findByAge(int age);
     List<Person> getByRole(String role);
 

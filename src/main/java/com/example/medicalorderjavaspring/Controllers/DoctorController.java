@@ -2,6 +2,13 @@ package com.example.medicalorderjavaspring.Controllers;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import com.example.medicalorderjavaspring.Services.interfaces.DoctorServiceInterface
+import org.springframework.http.HttpStatus;
+import com.example.medicalorderjavaspring.Models.Doctor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+
 
 @RestController
 @RequestMapping("doctor")

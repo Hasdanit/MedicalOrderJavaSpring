@@ -12,4 +12,5 @@ public interface PersonServiceInterface {
     List<Person> getByAge(int age);
     List<Person> getByRole(String role);
 
+    String createPerson(String name, String surname, String gender, int age, String role);
 }

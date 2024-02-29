@@ -20,5 +20,5 @@ public interface DoctorServiceInterface {
     Doctor getBySalary(double salary);
 
 
-
+    List<Doctor> getBySurname(String doctorSurname);
 }

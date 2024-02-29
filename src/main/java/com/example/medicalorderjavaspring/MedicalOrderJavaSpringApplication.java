@@ -60,7 +60,8 @@ public class MedicalOrderJavaSpringApplication {
         System.out.println("Please enter id");
 
         int id = scanner.nextInt();
-        String response = controller.getPerson(id);
+        PersonController personController = new PersonController( );
+        String response = personController.getAllByRole();
         System.out.println(response);
     }
 
