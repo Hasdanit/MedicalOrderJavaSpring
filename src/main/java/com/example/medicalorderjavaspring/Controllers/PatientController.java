@@ -1,4 +1,4 @@
-package com.example.medicalorderjavaspring.Controllers;
+/*package com.example.medicalorderjavaspring.Controllers;
 
 import com.example.medicalorderjavaspring.Models.Patient;
 import com.example.medicalorderjavaspring.Services.interfaces.PatientServiceInterface;
@@ -79,7 +79,7 @@ public class PatientController {
     @GetMapping("/diagnosis/{patient_diagnosis}")
     public List<Patient> getAllByDiagnosis(@PathVariable("patient_diagnosis") String diagnosis){
         return service.getByDiagnosis(diagnosis);
-    }
+    }*/
 
 
-}
+

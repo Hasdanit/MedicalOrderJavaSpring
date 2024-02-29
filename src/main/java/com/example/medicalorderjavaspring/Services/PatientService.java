@@ -35,7 +35,7 @@ public class PatientService implements PatientServiceInterface{
         return repo.findByDiagnosis(diagnosis);
     }
     public List<Patient> getByIsOnReecord(boolean isOnReecord){
-        return repo.findByisOnRecord();
+        return repo.findByisOnRecord(isOnReecord);
     }
     public List<Patient> getByBloodType(String bloodType){
         return repo.findByBloodType(bloodType);
@@ -44,7 +44,7 @@ public class PatientService implements PatientServiceInterface{
         return repo.findByIsVaccinated(isVaccinated);
     }
     public List<Patient> getByChronicDiseases(String chronicDiseases){
-        return repo.findByChronicDiseases(chronicDiseases)
+        return repo.findByChronicDiseases(chronicDiseases);
     }
     public List<Patient> getByIsInsurance(boolean isInsurance){
         return repo.findByIsInsurance(isInsurance);

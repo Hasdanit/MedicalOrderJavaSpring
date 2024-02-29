@@ -12,15 +12,15 @@ public interface PatientServiceInterface {
     Patient getById(int id);
 
     List<Patient> getByDiagnosis(String diagnosis);
+
     List<Patient> getByIsOnReecord(boolean isOnReecord);
+
     List<Patient> getByBloodType(String bloodType);
+
     List<Patient> getByIsVaccinated(boolean isVaccinated);
+
     List<Patient> getByChronicDiseases(String chronicDiseases);
+
     List<Patient> getByIsInsurance(boolean isInsurance);
 
-    List<Patient> getBySurname(String surname);
-
-    List<Patient> getByGender(String gender);
-
-    List<Patient> getByAge(int age);
 }

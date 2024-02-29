@@ -15,18 +15,29 @@ public class DoctorService implements DoctorServiceInterface {
         this.repo = repo;
     }
 
+
     @Override
-    public List<Doctor> getAll() {
-        return repo.findAll();
+    public Doctor getByRoomNumber(int roomNumber) {
+        return null;
     }
 
     @Override
-    public Doctor create(Doctor doctor) {
-        return repo.save(doctor);
+    public List<Doctor> getBySpecialization(String specialization) {
+        return null;
     }
 
     @Override
-    public Doctor getById(int id) {
-        return repo.findById(id).orElse(null);
+    public Doctor getByIsAvailable(boolean isAvailable) {
+        return null;
+    }
+
+    @Override
+    public Doctor getBySalary(double salary) {
+        return null;
+    }
+
+    @Override
+    public List<Doctor> getBySurname(String doctorSurname) {
+        return null;
     }
 }

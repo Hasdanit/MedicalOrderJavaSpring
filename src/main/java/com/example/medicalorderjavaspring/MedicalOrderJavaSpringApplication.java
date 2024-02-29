@@ -3,12 +3,23 @@ package com.example.medicalorderjavaspring;
 import com.example.medicalorderjavaspring.Controllers.PersonController;
 
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
-
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.example.medicalorderjavaspring.Models.Person;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.http.ResponseEntity;
 
 @SpringBootApplication
 public class MedicalOrderJavaSpringApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(MedicalOrderJavaSpringApplication.class, args);
+    }
+
+}
+/*public class MedicalOrderJavaSpringApplication {
     private PersonController controller;
     private Scanner scanner;
 
@@ -52,7 +63,7 @@ public class MedicalOrderJavaSpringApplication {
     }
 
     public void getAllUsersMenu() {
-        String response = controller.getAllPerson();
+        ResponseEntity<List<Person>> response = controller.getAll();
         System.out.println(response);
     }
 
@@ -60,7 +71,7 @@ public class MedicalOrderJavaSpringApplication {
         System.out.println("Please enter id");
 
         int id = scanner.nextInt();
-        PersonController personController = new PersonController( );
+        PersonController personController = new PersonController();
         String response = personController.getAllByRole();
         System.out.println(response);
     }
@@ -81,5 +92,5 @@ public class MedicalOrderJavaSpringApplication {
 
         String response = controller.createPerson(name, surname, gender, age, role);
         System.out.println(response);
-    }
-}
+    }*/
+
