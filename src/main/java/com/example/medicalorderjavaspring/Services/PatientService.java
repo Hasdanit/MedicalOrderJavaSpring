@@ -44,21 +44,9 @@ public class PatientService implements PatientServiceInterface{
         return repo.findByIsVaccinated(isVaccinated);
     }
     public List<Patient> getByChronicDiseases(String chronicDiseases){
-        return repo.findBy
+        return repo.findByChronicDiseases(chronicDiseases)
     }
     public List<Patient> getByIsInsurance(boolean isInsurance){
-        return repo.findBy
-    }
-
-    public List<Patient> getBySurname(String surname){
-        return repo.findBy
-    }
-
-    public List<Patient> getByGender(String gender){
-        return repo.findBy
-    }
-
-    public List<Patient> getByAge(int age){
-        return repo.findBy
+        return repo.findByIsInsurance(isInsurance);
     }
 }

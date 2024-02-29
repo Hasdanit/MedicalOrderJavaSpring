@@ -48,6 +48,12 @@ public class PersonService implements PersonServiceInterface {
 
         return repo.findByAge(age);
     }
+    public List<Person> getByGender(String gender) {
+
+        return repo.findByGender(gender);
+    }
+
+
     public String createPerson(String name, String surname, String gender, int age, String role) {
 
 

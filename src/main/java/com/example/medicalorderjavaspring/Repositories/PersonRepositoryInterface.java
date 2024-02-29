@@ -16,8 +16,10 @@ public interface PersonRepositoryInterface extends JpaRepository<Person, Integer
     List<Person> findBySurname(String surname);
     List<Person> findByAge(int age);
     List<Person> getByRole(String role);
+    List<Person> findByGender(String gender);
 
-    public String createPerson(String name, String surname, String gender, int age, String role);
+    String createPerson(String name, String surname, String gender, int age, String role);
+
 
 
 }

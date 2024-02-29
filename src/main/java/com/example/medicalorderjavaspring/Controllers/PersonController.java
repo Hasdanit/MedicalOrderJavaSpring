@@ -19,14 +19,15 @@ public class PersonController {
     private final PersonServiceInterface service;
 
     public PersonController(PersonServiceInterface service) {
+
         this.service = service;
     }
 
 
     @GetMapping("/")
-    public List<Person> getAll(){
-
-        return service.getAll();
+    public ResponseEntity<List<Person>> getAll(){
+        List<Person> people = service.getAll();
+        return people.isEmpty() ? new ResponseEntity<>(HttpStatus.NOT_FOUND) : new ResponseEntity<>(people, HttpStatus.OK);
     }
 
     @GetMapping("/{person_id}")
@@ -48,27 +49,30 @@ public class PersonController {
     }
 
     @GetMapping("/surname/{person_surname}")
-    public List<Person> getAllBySurname(@PathVariable("person_surname") String surname){
-        return service.getBySurname(surname);
+    public ResponseEntity<List<Person>> getAllBySurname(@PathVariable("person_surname") String surname){
+        List<Person> people = service.getBySurname(surname);
+        return people.isEmpty() ? new ResponseEntity<>(HttpStatus.NOT_FOUND) : new ResponseEntity<>(people, HttpStatus.OK);
     }
     @PostMapping("/gender/{person_gender}")
-    public List<Person> getAllByGender(@PathVariable("person_gender") String gender){
-        return service.getBySurname(gender);
+    public ResponseEntity<List<Person>> getAllByGender(@PathVariable("person_gender") String gender){
+        List<Person> people = service.getByGender(gender);
+        return people.isEmpty() ? new ResponseEntity<>(HttpStatus.NOT_FOUND) : new ResponseEntity<>(people, HttpStatus.OK);
     }
 
     @PostMapping("/age/{person_age}")
-    public List<Person> getAllByAge(@PathVariable("person_age") int age){
-        return service.getByAge(age);
+    public ResponseEntity<List<Person>> getAllByAge(@PathVariable("person_age") int age){
+        List<Person> people = service.getByAge(age);
+        return people.isEmpty() ? new ResponseEntity<>(HttpStatus.NOT_FOUND) : new ResponseEntity<>(people, HttpStatus.OK);
     }
 
     @PostMapping("/role/{person_role}")
-    public List<Person> getAllByRole(@PathVariable("person_role") String role){
-        return service.getBySurname(role);
+    public ResponseEntity<List<Person>> getAllByRole(@PathVariable("person_role") String role){
+        List<Person> people = service.getByRole(role);
+        return people.isEmpty() ? new ResponseEntity<>(HttpStatus.NOT_FOUND) : new ResponseEntity<>(people, HttpStatus.OK);
     }
 
     public String createPerson(String name, String surname, String gender, int age, String role) {
         return service.createPerson(name, surname, gender, age, role);
 
     }
-
 }
