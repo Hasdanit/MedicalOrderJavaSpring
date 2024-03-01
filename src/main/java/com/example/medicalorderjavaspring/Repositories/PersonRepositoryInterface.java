@@ -9,17 +9,13 @@ import java.util.List;
 public interface PersonRepositoryInterface extends JpaRepository<Person, Integer>{
     List<Person> findAll();
     Person getById(int id);
-    Person create(Person user);
+//    Person create(Person user);
     List<Person> getBySurname(String surname);
     Person findById(int id);
-    Person save(Person user);
+//    Person save(Person user);
     List<Person> findBySurname(String surname);
     List<Person> findByAge(int age);
     List<Person> getByRole(String role);
     List<Person> findByGender(String gender);
-
-    String createPerson(String name, String surname, String gender, int age, String role);
-
-
-
+//    String createPerson(String name, String surname, String gender, int age, String role);
 }

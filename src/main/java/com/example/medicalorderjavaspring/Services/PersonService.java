@@ -31,7 +31,6 @@ public class PersonService implements PersonServiceInterface {
 
     @Override
     public Person create(Person user) {
-
         return repo.save(user);
     }
     public List<Person> getByRole(String role){
@@ -55,8 +54,6 @@ public class PersonService implements PersonServiceInterface {
 
 
     public String createPerson(String name, String surname, String gender, int age, String role) {
-
-
         return null;
     }
 }
